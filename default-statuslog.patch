@@ -5,7 +5,7 @@
  	int n_prev = 0;
  	int c;
 -	char *statuslog = "/usr/local/nagios/var/status.log";
-+	char *statuslog = "/var/log/nagios/nagios.log";
++	char *statuslog = "/var/lib/nagios/status.dat";
  	int check_interval = 60;
  	char verbose = 0;
  	char is_20_format = 1;
