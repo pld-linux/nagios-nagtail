@@ -1,0 +1,11 @@
+--- nagtail-0.0.31/main.cpp~	2009-10-18 15:18:53.000000000 +0000
++++ nagtail-0.0.31/main.cpp	2010-12-02 14:28:37.519187753 +0000
+@@ -35,7 +35,7 @@
+ 	struct stats *prev = NULL;
+ 	int n_prev = 0;
+ 	int c;
+-	char *statuslog = "/usr/local/nagios/var/status.log";
++	char *statuslog = "/var/log/nagios/nagios.log";
+ 	int check_interval = 60;
+ 	char verbose = 0;
+ 	char is_20_format = 1;

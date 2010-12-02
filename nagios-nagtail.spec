@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications
 Source0:	http://www.vanheusden.com/nagtail/%{pkgname}-%{version}.tgz
 # Source0-md5:	57bc082f9555c6736e5bc8c4d41fa4aa
+Patch0:		default-statuslog.patch
 URL:		http://www.vanheusden.com/nagtail/
 BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -16,6 +17,7 @@ NagTail is like tail on the Nagios status logfile.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
+%patch0 -p1
 
 %build
 %{__make} nagtail \
