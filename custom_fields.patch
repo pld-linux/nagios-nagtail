@@ -1,0 +1,15 @@
+--- nagtail-0.0.31/pl.cpp~	2009-10-18 18:18:53.000000000 +0300
++++ nagtail-0.0.31/pl.cpp	2010-12-06 16:30:32.448003000 +0200
+@@ -308,7 +310,11 @@
+ 				char *par = is + 1;
+ 				*is = 0x00;
+ 
+-				if ((index = v2_0_find_entry_type(cmd)) != -1)
++				// nagios 3.0 custom params start with two underscore
++				if (strncmp(cmd, "__", 2) == 0) {
++					// skip custom command
++				}
++			   	else if ((index = v2_0_find_entry_type(cmd)) != -1)
+ 				{
+ 					switch(v2_0_config_elements[index].type)
+ 					{
