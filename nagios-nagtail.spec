@@ -18,8 +18,8 @@ NagTail is like tail on the Nagios status logfile.
 
 %prep
 %setup -q -n %{pkgname}-%{version}
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %{__make} nagtail \
